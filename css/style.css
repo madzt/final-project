@@ -1,3 +1,4 @@
+/*mobie view*/
 header {
 display: flex;
 flex-direction: column;
@@ -77,23 +78,69 @@ h4{
 
 body {
     background-color: #F7F7B0;
-    
-    
-
 }
-/*paragraph styling for home, italian, desserts, asian, american */
+/*flip-card styling*/
 .home p {
-   text-align: center;
-   margin-left: 1em;
-   margin-right: 1em;
-   margin-bottom: 1em;
-   font-size: 1.5rem;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-top: 400px;
+    font-size: 1.5rem;
 }
+#flip_image {
+    height: 300px;
+    margin: auto;
+    width: 70%;
+}
+
+.flip-card-front > img, .flip-card-back >img {
+    width: 100%;
+    margin: 4% 4% 4% 4%;
+    border: 10px solid #8F2B14;
+}
+/*flipcard functionality*/
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  /*end flipcard*/
+/*paragraph styling for italian, desserts, asian, american */
 .italian p, .desserts p, .asian p, .desserts p, .american p {
     margin-left: 1rem;
     border: 10px double #8F2B14;
-    padding: .75rem;
-    
+    padding: .75rem;  
 }
 
 .recipes {
@@ -102,33 +149,18 @@ body {
     width: 90%;
     margin: auto;
 }
-/* .recipes >img {
-    width: 80%;
-    justify-self: center;
 
-} */
+.flip-card-front > img, .flip-card-back >img {
+    width: 100%;
+    margin: 4% 4% 4% 4%;
+    border: 10px solid #8F2B14;
+}
+
 /*style images to take up full grid container */
 /*italian*/
-.penne-vodka_img >img, .bow-tie_img > img, .b_img > img{
-    width: 100%;
-    margin: 4% 4% 4% 4%;
-    border: 10px solid #8F2B14;
-}
-
-/*desserts*/
-.mm_pretzel_img > img, .apple-pie_img >img, .cheesecake_img > img {
-    width: 100%;
-    margin: 4% 4% 4% 4%;
-    border: 10px solid #8F2B14;
-}
-
-/*asian*/
-.panang_img > img, .fried-rice_img > img, .sushi_img > img{
-    width: 100%;
-    margin: 4% 4% 4% 4%;
-    border: 10px solid #8F2B14;
-}
-/*american*/
+.penne-vodka_img >img, .bow-tie_img > img, .b_img > img, 
+.mm_pretzel_img > img, .apple-pie_img >img, .cheesecake_img > img,
+.panang_img > img, .fried-rice_img > img, .sushi_img > img, 
 .spinach_img >img, .cheese_img >img, .wings_img >img{
     width: 100%;
     margin: 4% 4% 4% 4%;
@@ -137,22 +169,13 @@ body {
 
 /*style list elements in each food items class to be centered */
 /*desserts*/
-.mm-pretzel-bites > ul, .apple-pie > ul, .cheesecake >ul{
-    text-align: center;
-    list-style-type: none;
-}
-
-/*asian*/
-.panang-curry > ul, .friedrice >ul, .sushi >ul{
-    text-align: center;
-    list-style-type: none;
-}
-
-/*italian*/
+.mm-pretzel-bites > ul, .apple-pie > ul, .cheesecake >ul,
+.panang-curry > ul, .friedrice >ul, .sushi >ul,
 .bow-tie_text > ul, .penne-vodka_text >ul, .b_text >ul{
     text-align: center;
     list-style-type: none;
 }
+
 /*american*/
 .ingredients >ul {
     text-align: center;
@@ -193,9 +216,6 @@ body {
     border: chocolate solid 10px;
     width: 100%;
 
-}
-.flip-card-inner {
-    transition: transform none;
 }
 
 footer {
@@ -240,21 +260,21 @@ input[type=submit]:hover {
     background-color: #8F2B14;
 }
 
-  @media screen and (min-width:900px) {
-        header {
+@media screen and (min-width:900px) {
+    header {
             /* display: flex; */
             /* flex-direction: column; */
-            align-items: center;
-            justify-content: center;
-            font-family: 'Henny Penny', cursive;
-            text-align: center;
-            font-size: 3rem;
-            color: #8F2B14;
-            margin:5% 10% 2% 10%;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Henny Penny', cursive;
+        text-align: center;
+        font-size: 3rem;
+        color: #8F2B14;
+        margin:5% 10% 2% 10%;
             /* padding: 5% 0% 5% 0%; */
             /*background-image: url("../imgs/foodbg.jpeg");*/
 
-        }
+    }
         
         .nav_links{
             display:flex;
@@ -298,6 +318,8 @@ input[type=submit]:hover {
         text-decoration-style: solid;
         
         }
+    
+       
         /*styling headers and body*/
         h1{
             font-family: 'Henny Penny', cursive;
@@ -336,8 +358,69 @@ input[type=submit]:hover {
             margin-left: 1em;
             margin-right: 1em;
             margin-bottom: 1em;
+            margin-top: 250px;
             font-size: 1.5rem;
         }
+        /*flipcard styling*/
+        #flip_image {
+            height: 830px;
+            margin: auto;
+            width: 70%;
+        }
+        
+        .flip-card-front > img, .flip-card-back >img {
+            width: 100%;
+            margin: 4% 4% 4% 4%;
+            border: 10px solid #8F2B14;
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+          }
+          
+          /* This container is needed to position the front and back side */
+          .flip-card-inner {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+          }
+          
+          /* Do an horizontal flip when you move the mouse over the flip box container
+          .flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner {
+            transform: rotateY(180deg);
+          } */
+          .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+          }
+          .flip-card:active .flip-card-inner {
+            transform: rotateY(180deg);
+          }
+          .flip-card:focus-within .flip-card-inner {
+            transform: rotateY(180deg);
+          }
+          .flip-card:focus .flip-card-inner {
+            transform: rotateY(180deg);
+          }
+          
+          /* Position the front and back side */
+          .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+          }
+    
+          /* Style the back side */
+          .flip-card-back {
+            transform: rotateY(180deg);
+          }
         .italian p, .desserts p, .asian p, .desserts p, .american p {
             margin-left: 2%;
             border: 10px double #8F2B14;
@@ -533,7 +616,6 @@ input[type=submit]:hover {
 
         } 
         
-        
         .collage {
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -546,9 +628,10 @@ input[type=submit]:hover {
             border: chocolate solid 10px;
             width: 100%;
         }
-        .flip-card-inner {
+        /* .flip-card-inner {
             transition: transform none;
-        }
+        } */
+        
         /* .flip-card-back {
             visibility: hidden;
         } */
@@ -670,6 +753,25 @@ input[type=submit]:hover {
         grid-template-rows: 1fr 1fr 1fr;
         grid-row-gap: 1rem;
     }
+    .home p {
+        text-align: center;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        margin-top: 400px;
+        font-size: 1.5rem;
+    }
+    #flip_image {
+        height: 830px;
+        margin: auto;
+        width: 70%;
+    }
+    
+    .flip-card-front > img, .flip-card-back >img {
+        width: 100%;
+        margin: 4% 4% 4% 4%;
+        border: 10px solid #8F2B14;
+    } 
     .flip-card {
         background-color: transparent;
         width: 100%;
@@ -689,9 +791,28 @@ input[type=submit]:hover {
       }
       
       /* Do an horizontal flip when you move the mouse over the flip box container */
-      .flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner {
+      /* .flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner {
         transform: rotateY(180deg);
       }
+      /*stolen*/
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-image:focus-within .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+  
+
+  /* .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  } */
       
       /* Position the front and back side */
       .flip-card-front, .flip-card-back {
@@ -705,7 +826,8 @@ input[type=submit]:hover {
       /* Style the back side */
       .flip-card-back {
         transform: rotateY(180deg);
-      } 
+      }
+      
 
 }
 
