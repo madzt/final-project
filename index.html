@@ -36,14 +36,14 @@
     </header>
     <main class="home" id="home">
         <h1>Welcome to Jake's College Kitchen!</h1>
-        <div class="flip_image" id= "flip_image">
-            <div class="flip-card">
-                <div class="flip-card-inner" id="flip_image">
-                  <div class="flip-card-front" id="flip_image">
-                    <img src ="imgs/jake bolognese.PNG" alt = "Chef Jake cooking bolognese pasta">
+        <div class="flip_image">
+            <div class="flip-card" tabindex="0"> 
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src ="imgs/jakefront.jpg" alt = "Chef Jake cooking bolognese pasta">
                   </div>
-                  <div class="flip-card-back" id="flip_image">
-                    <img src="imgs/jake back.PNG" alt= "Chef Jake cooking penne alla vodka">
+                  <div class="flip-card-back">
+                    <img src="imgs/jakeback.jpg" alt= "Chef Jake cooking penne alla vodka">
                   </div>
                 </div>
               </div>
@@ -183,7 +183,7 @@
             
 
         </div>
-        <form action="https://formspree.io/f/mdobnjez" method = "POST">
+        <form action="https://formspree.io/f/mdobnjez" method = "POST" enctype="multipart/form-data">
             <h2>Submit Your Recipes</h2>
             <h3>Have a recipe you love? Please share your recommendation!</h3>
             <label for="fname">First Name</label>
@@ -196,7 +196,7 @@
             <textarea id="recommendation" name="recommendation" rows=4 cols=3 placeholder="Share your recipe here!"></textarea>
 
             <label for="picture">(Optional) Photo Submission</label>
-            <input type="file" id="picture" name="picture" accept=".png, .jpeg">
+            <input type="file" id="picture" name="picture" accept="image/png, image/jpeg">
 
     
         
