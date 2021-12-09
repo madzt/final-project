@@ -530,6 +530,7 @@ input[type=submit]:hover {
         .ingredients >ul {
             text-align: center;
             list-style-type: none;
+            margin-bottom: 4%;
         }
         
         /*style the text and imgs of each food item to be in grid col 1*/
@@ -592,7 +593,9 @@ input[type=submit]:hover {
 
          }
           
-        .ingredients {
+         #cheese_ingredients, #sushi_ingredients, #b_ingredients, #cheesecake_ingredients,
+         #spinach_ingredients, #friedrice_ingredients, #penne_ingredients, #apple-pie_ingredients,
+         #wings_ingredients, #panang_ingredients, #bow-tie_ingredients, #mm_ingredients{
             grid-column: 3/4;
             background-color: #F7F7B0;
             height: fit-content;
@@ -667,13 +670,6 @@ input[type=submit]:hover {
             border: chocolate solid 10px;
             width: 100%;
         }
-        /* .flip-card-inner {
-            transition: transform none;
-        } */
-        
-        /* .flip-card-back {
-            visibility: hidden;
-        } */
         
         footer {
             display: flex;
@@ -691,11 +687,6 @@ input[type=submit]:hover {
 
         }
         
-        /* @media screen and (min-width: 778px){
-            .recipes{
-                grid-template-columns: 1fr 1fr;
-            }
-        } */
         input[type=text], select, textarea {
             width: 100%;
             padding: 12px;
@@ -746,8 +737,99 @@ input[type=submit]:hover {
         opacity: 0px; 
         animation-iteration-count: 1;
         } */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     /* want to get header left-aligned and nav links evenly spaced between */
+    .recipes {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 4%;
+        width: 100%;
+        margin: auto;
+        background-image: url("../imgs/bgbody.jpeg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*style images to take up full grid container */
+    .penne-vodka_img >img, .bow-tie_img > img, .b_img > img, 
+    .mm_pretzel_img > img, .apple-pie_img >img, .cheesecake_img > img,
+    .panang_img > img, .fried-rice_img > img, .sushi_img > img, 
+    .spinach_img >img, .cheese_img >img, .wings_img >img
+    {
+        width: 100%;
+        /* margin: 4% 4% 4% 4%; */
+        border: 10px solid #8F2B14;
+    }
+    
+    /*style list elements in each food items class to be centered */
+    /*desserts*/
+        .mm-pretzel-bites > ul, .apple-pie > ul, .cheesecake >ul,
+        .panang-curry > ul, .friedrice >ul, .sushi >ul,
+        .bow-tie_text > ul, .penne-vodka_text >ul, .b_text >ul,
+        .ingredients >ul
+        {
+            text-align: center;
+            list-style-type: none;
+        }
+        /*first item*/
+        .wings, .panang-curry, .bow-tie_text,
+        .mm-pretzel-bites{
+            grid-column: 2;
+            background-color: #F7F7B0;
+            margin-top: 4%;
+            margin-right: 2%;
+        } 
+        .wings_img, .panang_img, .bow-tie_img, .mm_pretzel_img {
+            grid-column: 1;
+            grid-row: 1/3;
+        } 
+        #wings_ingredients, #panang_ingredients, #bow-tie_ingredients, #mm_ingredients{
+            grid-column: 2;
+            grid-row: 2;
+            height: fit-content;
+            margin-left: .5%;
+            margin-right: 2%;
+        }
+        /*second item*/
+        .spinach, .friedrice, .penne-vodka_text, .apple-pie {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: #F7F7B0;
+            margin-top: 4%;
+            margin-right: 2%;
+        }
+        .spinach_img, .fried-rice_img, .penne-vodka_img, .apple-pie_img{
+            grid-column: 1;
+            grid-row: 3/5;
+        } 
+        #spinach_ingredients, #friedrice_ingredients, #penne_ingredients, #apple-pie_ingredients{
+            grid-column: 2;
+            grid-row: 4;
+            margin-left: .5%;
+            margin-right: 2%;
+        }
+        /*third item*/
+        .cheese, .sushi, .b_text, .cheesecake{
+            grid-column: 2;
+            grid-row: 5;
+            background-color: #F7F7B0;
+            margin-top: 4%;
+            margin-right: 2%;
+        }
+        .cheese_img, .sushi_img, .b_img, .cheesecake_img{
+            grid-column: 1;
+            grid-row: 5/7;
+        }  
+        #cheese_ingredients, #sushi_ingredients, #b_ingredients, #cheesecake_ingredients{
+            grid-column: 2;
+            grid-row: 6;
+            margin-left: .5%;
+            margin-right: 2%;
+        }
+        /*ok changing grid ends!*/
     header {
             display: flex;
             flex-direction: row;
