@@ -154,7 +154,7 @@ body {
 /*style images to take up full grid container */
 .penne-vodka_img >img, .bow-tie_img > img, .b_img > img, 
 .mm_pretzel_img > img, .apple-pie_img >img, .cheesecake_img > img,
-.panang_img > img, .fried-rice_img > img, .sushi_img > img, 
+.panang_img > img, .fried-rice_img > img, .sushi_img > img, .crab-rangoon-img >img,
 .spinach_img >img, .cheese_img >img, .wings_img >img{
     width: 100%;
     margin: 4% 4% 4% 4%;
@@ -175,7 +175,7 @@ body {
 .bow-tie_text, .bow-tie_img, 
 .b_test, .b_img,
 .penne-vodka_img, .penne-vodka_text,
-.panang-curry, .panang_img, .sushi, .sushi_img, .fried-rice_img, .friedrice,
+.panang-curry, .panang_img, .sushi, .sushi_img, .crab-rangoon-img, .fried-rice_img, .friedrice,
 .wings, .wings_img, .spinach, .spinach_img, .cheese, .cheese_img,
 .apple-pie, .apple-pie_img, .cheesecake, .cheesecake_img, .mm-pretzel-bites, .mm_pretzel_img
  {
@@ -276,7 +276,7 @@ input[type=submit]:hover {
         .recipes {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
             grid-column-gap: 4%;
             width: 100%;
             margin: auto;
@@ -317,13 +317,22 @@ input[type=submit]:hover {
 
         }
         /*asian*/
+        .crab-rangoon {
+            grid-column: 2/3;
+            background-color: #F7F7B0;
+
+        }
+        .crab-rangoon-img{
+            grid-column: 1/2;
+            grid-row: 1;
+        }
         .panang-curry{
             grid-column: 2/3;
             background-color: #F7F7B0;
         }
          .panang_img { 
             grid-column: 1/2;
-            grid-row: 1;
+            grid-row: 2;
          } 
 
          .friedrice{
@@ -333,7 +342,7 @@ input[type=submit]:hover {
         }
         .fried-rice_img {
             grid-column: 1/2;
-            grid-row: 2;
+            grid-row: 3;
 
         } 
          .sushi {
@@ -343,7 +352,7 @@ input[type=submit]:hover {
          } 
          .sushi_img {
             grid-column: 1/2;
-            grid-row: 3;
+            grid-row: 4;
 
          }
             /*american*/
@@ -404,7 +413,7 @@ input[type=submit]:hover {
         } 
           
          #cheese_ingredients, #sushi_ingredients, #b_ingredients, #cheesecake_ingredients,
-         #spinach_ingredients, #friedrice_ingredients, #penne_ingredients, #apple-pie_ingredients,
+         #spinach_ingredients, #friedrice_ingredients, #crab-rangoons, #penne_ingredients, #apple-pie_ingredients,
          #wings_ingredients, #panang_ingredients, #bow-tie_ingredients, #mm_ingredients{
             grid-column: 3/4;
             background-color: #F7F7B0;
